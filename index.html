@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<title>JavaScript Business Tools</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>JavaScript Business Tools</h1>
+
+<!-- Tax Calculator -->
+<section>
+<h2>1. Tax Withholding Calculator</h2>
+
+<input type="number" id="income" placeholder="รายได้ต่อปี">
+
+<button onclick="calculateTax()">คำนวณ</button>
+
+<p id="taxResult"></p>
+
+</section>
+
+
+<!-- Inventory System -->
+<section>
+
+<h2>2. POS Inventory System</h2>
+
+<input type="text" id="productId" placeholder="รหัสสินค้า">
+
+<input type="number" id="quantity" placeholder="จำนวนที่ซื้อ">
+
+<button onclick="buyProduct()">ซื้อ</button>
+
+<h3>Stock</h3>
+
+<table border="1">
+<thead>
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>Price</th>
+<th>Stock</th>
+</tr>
+</thead>
+
+<tbody id="stockTable">
+
+</tbody>
+
+</table>
+
+<p id="totalPrice"></p>
+
+</section>
+
+
+<!-- Currency Converter -->
+
+<section>
+
+<h2>3. Currency Converter (USD → THB)</h2>
+
+<input type="number" id="usdPrice" placeholder="ราคา USD">
+
+<button onclick="convertCurrency()">แปลงค่า</button>
+
+<p id="currencyResult"></p>
+
+</section>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
