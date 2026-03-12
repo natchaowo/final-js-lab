@@ -2,41 +2,43 @@
 <html lang="th">
 <head>
 <meta charset="UTF-8">
-<title>JavaScript Business Tools</title>
+<title>Business Tools</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<h1>JavaScript Business Tools</h1>
+<div class="container">
 
-<!-- Tax Calculator -->
-<section>
-<h2>1. Tax Withholding Calculator</h2>
+<h1>📊 Business Web Tools</h1>
 
-<input type="number" id="income" placeholder="รายได้ต่อปี">
+<!-- Tax -->
+<div class="card">
+<h2>Tax Calculator</h2>
 
-<button onclick="calculateTax()">คำนวณ</button>
+<input type="number" id="income" placeholder="Annual Income">
+
+<button onclick="calculateTax()">Calculate</button>
 
 <p id="taxResult"></p>
 
-</section>
+</div>
 
 
-<!-- Inventory System -->
-<section>
+<!-- Inventory -->
 
-<h2>2. POS Inventory System</h2>
+<div class="card">
 
-<input type="text" id="productId" placeholder="รหัสสินค้า">
+<h2>POS Inventory</h2>
 
-<input type="number" id="quantity" placeholder="จำนวนที่ซื้อ">
+<div class="form-row">
+<input type="text" id="productId" placeholder="Product ID">
+<input type="number" id="quantity" placeholder="Quantity">
+<button onclick="buyProduct()">Buy</button>
+</div>
 
-<button onclick="buyProduct()">ซื้อ</button>
+<table>
 
-<h3>Stock</h3>
-
-<table border="1">
 <thead>
 <tr>
 <th>ID</th>
@@ -46,31 +48,31 @@
 </tr>
 </thead>
 
-<tbody id="stockTable">
-
-</tbody>
+<tbody id="stockTable"></tbody>
 
 </table>
 
 <p id="totalPrice"></p>
 
-</section>
+</div>
 
 
-<!-- Currency Converter -->
+<!-- Currency -->
 
-<section>
+<div class="card">
 
-<h2>3. Currency Converter (USD → THB)</h2>
+<h2>Currency Converter</h2>
 
-<input type="number" id="usdPrice" placeholder="ราคา USD">
+<input type="number" id="usdPrice" placeholder="Price in USD">
 
-<button onclick="convertCurrency()">แปลงค่า</button>
+<button onclick="convertCurrency()">Convert</button>
 
 <p id="currencyResult"></p>
 
-</section>
+</div>
 
+
+</div>
 
 <script src="script.js"></script>
 
